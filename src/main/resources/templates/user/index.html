@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<head>
+<title>Người dùng</title>
+</head>
+
+<body>
+
+	<div class="container-fluid" layout:fragment="content">
+		<div class="row bg-title">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+				<h4 class="page-title">Danh sách thành viên</h4>
+			</div>
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
+				<a th:href="@{/user/add}" class="btn btn-sm btn-success">Thêm mới</a>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+					<div class="table-responsive">
+						<table class="table" id="example">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th>Họ và tên</th>
+									<th>Email</th>
+									<th>Số điện thoại</th>
+									<th>Địa chỉ</th>
+									<th>Quyền</th>
+									<th>Tác vụ</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr th:if="${users.empty}">
+								<td colspan = "7">No Users Available</td>
+							</tr>
+								<tr th:each="item : ${users}">
+									<td th:text="${itemStat.index + 1}">1</td>
+									<td th:text="${item.fullname}">Deshmukh</td>
+									<td th:text="${item.email}">Prohaska</td>
+									<td th:text="${item.phone}">@Genelia</td>
+									<td th:text="${item.address}">admin</td>
+									<td th:text="${item.roleName}">admin</td>
+									<td>
+									<a th:href="@{/user/edit/{id}(id=${item.id})}" class="btn btn-sm btn-primary">Sửa</a> 
+									<a th:href="@{/user/delete/{id}(id=${item.id})}" class="btn btn-sm btn-danger">Xóa</a> 
+									<a th:href="@{/user/details/{id}(id=${item.id})}" class="btn btn-sm btn-info">Xem</a>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+
+
+
+</body>
+
+</html>

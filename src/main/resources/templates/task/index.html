@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<head>
+<title>Đầu việc</title>
+</head>
+
+<body>
+
+	<div class="container-fluid" layout:fragment="content">
+		<div class="row bg-title">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+				<h4 class="page-title">Danh sách đầu việc</h4>
+			</div>
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
+				<a th:href="@{task/add}" class="btn btn-sm btn-success">Thêm mới</a>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+					<div class="table-responsive">
+						<table class="table" id="example">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th>Tên đầu việc</th>
+									<th>Ngày kết thúc</th>
+									<th>Nhóm việc</th>
+									<th>Người làm</th>
+									<th>Trạng thái</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:if="${tasks.empty}">
+									<td colspan="7">No User Available</td>
+								</tr>
+								<tr th:each="item : ${tasks}">
+									<td th:text="${itemStat.index + 1}">1</td>
+									<td th:text="${item.name}">Deshmukh</td>
+									<td th:text="${item.endDate}">Deshmukh</td>
+									<td th:text="${item.groupName}">Prohaska</td>
+									<td th:text="${item.fullName}">@Genelia</td>
+									<td th:text="${item.statusName}">@Genelia</td>
+ 									<td><a th:href="@{/task/edit/{id}(id=${item.id})}" class="btn btn-sm btn-primary">Sửa</a> <a
+										th:href="@{/task/delete/{id}(id=${item.id})}" class="btn btn-sm btn-danger">Xóa</a>  </td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container-fluid -->
+	<footer class="footer text-center"> 2019 &copy; com.crm </footer>
+
+
+</body>
+
+</html>

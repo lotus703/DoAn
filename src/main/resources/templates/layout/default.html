@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/plugins/images/favicon.png}">
+    <title>Pixel Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{/assets/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link th:href="@{/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css}" rel="stylesheet">
+    <!-- animation CSS -->
+    <link th:href="@{/assets/css/animate.css}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet">
+    <!-- color CSS -->
+    <link th:href="@{/assets/css/colors/blue-dark.css}" id="theme" rel="stylesheet">
+ 	<!--toast CSS -->
+    <link th:href="@{/assets/plugins/bower_components/toast-master/css/jquery.toast.css}" rel="stylesheet">
+    <!-- morris CSS -->
+    <link th:href="@{/assets/plugins/bower_components/morrisjs/morris.css}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="wrapper">
+        <!-- Navigation -->
+       <div th:replace="fragments/navbar">
+       </div>
+        <!-- Left navbar-header -->
+         <div th:replace="fragments/sidebar">
+         </div>
+        <!-- Left navbar-header end -->
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid" layout:fragment="content"></div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2019 &copy; Quản Lý Nhân Sự </footer>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script th:src="@{/assets/plugins/bower_components/jquery/dist/jquery.min.js}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script th:src="@{/assets/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script th:src="@{/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js}"></script>
+    <!--slimscroll JavaScript -->
+    <script th:src="@{/assets/js/jquery.slimscroll.js}"></script>
+    <!--Wave Effects -->
+    <script th:src="@{/assets/js/waves.js}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script th:src="@{/assets/js/custom.min.js}"></script> <script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js}"></script>
+    <script th:src="@{/assets/plugins/bower_components/counterup/jquery.counterup.min.js}"></script>
+    <!--Morris JavaScript -->
+    <script th:src="@{/assets/plugins/bower_components/raphael/raphael-min.js}"></script>
+    <script th:src="@{/assets/plugins/bower_components/morrisjs/morris.js}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script th:src="@{/assets/js/custom.min.js}"></script>
+    <script th:src="@{/assets/js/dashboard1.js}"></script>
+    <script th:src="@{/assets/plugins/bower_components/toast-master/js/jquery.toast.js}"></script>
+	 <!--Counter js -->
+    <script th:src="@{/assets/plugins/bower_components/waypoints/lib/jquery.waypoints.js}"></script>
+    <script src="@{/assets/plugins/bower_components/counterup/jquery.counterup.min.js}"></script>
+</body>
+
+</html>

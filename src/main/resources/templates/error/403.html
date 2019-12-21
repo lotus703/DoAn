@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security5"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Ropa+Sans"
+	rel="stylesheet">
+<style type="text/css">
+.error-main {
+	font-family: 'Ropa Sans', sans-serif;
+	margin-top: 30px;
+	background-color: #85b4d0;
+	text-align: center;
+	color: #fff;
+}
+
+.error-heading {
+	margin: 50px auto;
+	width: 250px;
+	border: 5px solid #fff;
+	font-size: 126px;
+	line-height: 126px;
+	border-radius: 30px;
+	text-shadow: 6px 6px 5px #000;
+}
+
+.error-heading img {
+	width: 100%;
+}
+
+.error-main h1 {
+	font-size: 72px;
+	margin: 0px;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 5px #fff;
+}
+</style>
+<title>Oops!</title>
+</head>
+
+<body>
+	<div class="container-fluid" layout:fragment="content">
+		<div class="row bg-title">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+				<h4 class="page-title">Truy cập bị từ chối</h4>
+			</div>
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+				<a href="http://wrappixel.com/templates/pixeladmin/" target="_blank"
+					class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Upgrade
+					to Pro</a>
+				<ol class="breadcrumb">
+					<li><a href="#">Dashboard</a></li>
+					<li class="active">403</li>
+				</ol>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<div class="error-main" >
+			<h1>Oops!</h1>
+			<div class="error-heading">403</div>
+			<p>Rất tiếc! Bạn không có quyền truy cập vào đường dẫn này.</p>
+		</div>
+	</div>
+</body>
+
+</html>

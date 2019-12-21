@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+<head>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container-fluid" layout:fragment="content">
+		<div class="row bg-title">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+				<h4 class="page-title">Danh sách quyền</h4>
+			</div>
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
+				<a th:href="@{/role/add}" class="btn btn-sm btn-success">Thêm mới</a>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+					<div class="table-responsive">
+						<table class="table" id="example">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th>Tên Quyền</th>
+									<th>Mô Tả</th>
+									<th>Hành Động</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:if="${roles.empty}">
+									<td colspan="4">No Roles Available</td> 
+								</tr>
+								<tr th:each="item : ${roles}">
+									<td th:text="${itemStat.index + 1}">1</td>
+									<td th:text="${item.name}">ROLE_ADMIN</td>
+									<td th:text="${item.description}">ROLE_ADMIN</td>
+									<td><a th:href="@{/role/edit/{id}(id=${item.id})}" class="btn btn-sm btn-primary">Sửa</a> <a
+										th:href="@{/role/delete/{id}(id=${item.id})}" class="btn btn-sm btn-danger">Xóa</a></td>
+								</tr>
+								 
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+</body>
+</html>

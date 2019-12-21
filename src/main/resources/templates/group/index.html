@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<head>
+<title>Nhóm việc</title>
+</head>
+
+<body>
+<div class="container-fluid" layout:fragment="content">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Danh sách công việc</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
+                        <a th:href="@{/group/add}" class="btn btn-sm btn-success">Thêm mới</a>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <div class="table-responsive">
+                                <table class="table" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tên Công Việc</th>
+                                            <th>Ngày Bắt Đầu</th>
+                                            <th>Ngày Kết Thúc</th>
+                                            <th>Hành Động</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	<tr th:if="${group.empty}">
+                                    		<td colspan="4">No Groups Available<td>
+                                    	</tr>
+                                        <tr th:each="item : ${group}">
+                                            <td th:text="${itemStat.index + 1}">1</td>
+                                            <td th:text="${item.name}">Phân tích dự án</td>
+                                            <td th:text="${item.startDate}">22/05/2019</td>
+                                            <td th:text="${item.endDate}">30/05/2019</td>
+                                            <td>
+                                                <a th:href="@{/group/edit/{id}(id=${item.id})}" class="btn btn-sm btn-primary">Sửa</a>
+                                                <a th:href="@{/group/delete/{id}(id=${item.id})}" class="btn btn-sm btn-danger">Xóa</a>
+                                                <a href="groupwork-details.html" class="btn btn-sm btn-info">Xem</a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+
+</body>
+
+</html>
