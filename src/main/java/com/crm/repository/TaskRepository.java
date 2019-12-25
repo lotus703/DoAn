@@ -31,6 +31,6 @@ public interface TaskRepository extends JpaRepository<Task, String>{
 	
 	int countByUserIdAndStatusId(String userId, String statusId);
 	
-	
+	List<Task> findByUserIdAndStatusId(String userId,String statusId);
 
 }

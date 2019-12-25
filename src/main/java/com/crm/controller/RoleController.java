@@ -56,6 +56,7 @@ public class RoleController {
 	
 	@PostMapping("edit")
 	public String edit(@Valid @ModelAttribute Role role, BindingResult erros) {	
+		
 		roleRepository.save(role);
 		return "redirect:/role";
 	}

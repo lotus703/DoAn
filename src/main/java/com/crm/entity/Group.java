@@ -3,6 +3,7 @@ package com.crm.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -36,7 +37,7 @@ public class Group {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date endDate;
 	
-	@OneToMany(mappedBy = "group", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "group", fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	private List<Task> tasks;
 	
 	public Group(){

@@ -19,16 +19,17 @@
 		<!-- /.row -->
 		<!-- .row -->
 		<div class="row">
-			<div class="col-md-4 col-xs-12" >
+			<div class="col-md-4 col-xs-12">
 				<div class="white-box">
 					<div class="user-bg">
-						<img width="100%" alt="user" th:src="@{/plugins/images/large/img1.jpg}">
+						<img width="100%" alt="user"
+							th:src="@{/assets/plugins/images/large/img1.jpg}">
 						<div class="overlay-box">
 							<div class="user-content">
 								<a href="javascript:void(0)"><img
-									th:src="@{/plugins/images/users/genu.jpg}" class="thumb-lg img-circle"
-									alt="img"></a>
-									
+									th:src="@{/assets/plugins/images/users/genu.jpg}"
+									class="thumb-lg img-circle" alt="img"></a>
+
 								<h4 class="text-white" th:text="${user.fullname}">User Name</h4>
 								<h5 class="text-white" th:text="${user.email}">info@myadmin.com</h5>
 							</div>
@@ -39,21 +40,21 @@
 							<p class="text-purple">
 								<i class="ti-facebook"></i>
 							</p>
-							<h4 th:text="${numNon} * 100 / ${num_task} + '%'"></h4>
+							<h4 th:text="${rate_non} + '%'"></h4>
 							<h6>Chưa thực hiện</h6>
 						</div>
 						<div class="col-md-4 col-sm-4 text-center">
 							<p class="text-blue">
 								<i class="ti-twitter"></i>
 							</p>
-							<h4 maxlength="4" th:text="${numProcess} * 100 / ${num_task} + '%'">50%</h4>
+							<h4 maxlength="4" th:text="${rate_doing} + '%'">50%</h4>
 							<h6>Đang thực hiện</h6>
 						</div>
 						<div class="col-md-4 col-sm-4 text-center">
 							<p class="text-danger">
 								<i class="ti-dribbble"></i>
 							</p>
-							<h4 th:text="${numSuccess} * 100 / ${num_task} + '%'">30%</h4>
+							<h4 th:text="${rate_complete} + '%'">30%</h4>
 							<h6>Hoàn thành</h6>
 						</div>
 					</div>
@@ -63,26 +64,31 @@
 				<div class="white-box">
 					<form class="form-horizontal form-material">
 						<div class="form-group">
-							<label  class="col-md-12">Họ và tên: </label>	 
-							<span class="col-md-12" th:text="${user.fullname}"></span>
+							<label class="col-md-12">Họ và tên: </label> <span
+								class="col-md-12" th:text="${user.fullname}"></span>
+										<hr width="100%" align="left" />
 						</div>
 						<div class="form-group">
-							<label for="example-email" class="col-md-12">Email: </label>
-							<span class="col-md-12" th:text="${user.email}"></span>
+							<label for="example-email" class="col-md-12">Email: </label> <span
+								class="col-md-12" th:text="${user.email}"></span>
+								<hr width="100%" align="left" />
 						</div>
 						<div class="form-group">
-							<label class="col-md-12">Số điện thoại:  </label>
-							<span class="col-md-12" th:text="${user.phone}"></span>
+							<label class="col-md-12">Số điện thoại: </label> <span
+								class="col-md-12" th:text="${user.phone}"></span>
+								<hr width="100%" align="left" />
 						</div>
 						<div class="form-group">
-							<label class="col-md-12">Địa chỉ:   </label>
-							<span class="col-md-12" th:text="${user.address}"></span>
+							<label class="col-md-12">Địa chỉ: </label> <span
+								class="col-md-12" th:text="${user.address}"></span>
+								<hr width="100%" align="left" />
 						</div>
 						<div class="form-group">
-							<label class="col-md-12">Số công việc:   </label>
-							<span class="col-md-12" th:text="${num_task}"></span>
+							<label class="col-md-12">Số công việc: </label> <span
+								class="col-md-12" th:text="${num_task}"></span>
+								<hr width="100%" align="left" />
 						</div>
-						  
+
 					</form>
 				</div>
 			</div>
@@ -98,15 +104,14 @@
 					<div class="message-center">
 						<a href="#">
 							<div class="mail-contnet">
-								<h5>Pavan kumar</h5>
-								<span class="mail-desc">Just see the my admin!</span> <span
-									class="time">9:30 AM</span>
-							</div>
-						</a> <a href="#">
-							<div class="mail-contnet">
-								<h5>Sonu Nigam</h5>
-								<span class="mail-desc">I've sung a song! See you at</span> <span
-									class="time">9:10 AM</span>
+								<div th:if="${list_non.empty}">
+									<h5>Không có công việc nào!</h5>
+								</div>
+								<div th:each="item:${list_non}">
+									<h5 th:text="${item.name}"></h5>
+									 <hr width="40%" align="left" />
+								</div>
+
 							</div>
 						</a>
 					</div>
@@ -118,15 +123,13 @@
 					<div class="message-center">
 						<a href="#">
 							<div class="mail-contnet">
-								<h5>Pavan kumar</h5>
-								<span class="mail-desc">Just see the my admin!</span> <span
-									class="time">9:30 AM</span>
-							</div>
-						</a> <a href="#">
-							<div class="mail-contnet">
-								<h5>Sonu Nigam</h5>
-								<span class="mail-desc">I've sung a song! See you at</span> <span
-									class="time">9:10 AM</span>
+								<div th:if="${list_non.empty}">
+									<h5>Không có công việc nào!</h5>
+								</div>
+								<div th:each="item:${list_doing}">
+									<h5 th:text="${item.name}"></h5>
+									<hr width="40%" align="left" />
+								</div>
 							</div>
 						</a>
 					</div>
@@ -138,15 +141,13 @@
 					<div class="message-center">
 						<a href="#">
 							<div class="mail-contnet">
-								<h5>Pavan kumar</h5>
-								<span class="mail-desc">Just see the my admin!</span> <span
-									class="time">9:30 AM</span>
-							</div>
-						</a> <a href="#">
-							<div class="mail-contnet">
-								<h5>Sonu Nigam</h5>
-								<span class="mail-desc">I've sung a song! See you at</span> <span
-									class="time">9:10 AM</span>
+								<div th:if="${list_non.empty}">
+									<h5>Không có công việc nào!</h5>
+								</div>
+								<div th:each="item:${list_done}">
+									<h5 th:text="${item.name}"></h5>
+								<hr width="40%" align="left" />
+								</div>
 							</div>
 						</a>
 					</div>

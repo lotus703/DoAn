@@ -2,6 +2,7 @@ package com.crm.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -20,7 +21,7 @@ public class Status {
 	@Length(min = 4, message = "Tên không được ít hơn 4 ký tự!")
 	private String name;
 	
-	@OneToMany(mappedBy = "status", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "status", fetch = FetchType.LAZY, cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<Task> tasks;
 	public Status() {
 		

@@ -2,6 +2,7 @@ package com.crm.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -24,7 +25,8 @@ public class Role {
 	@NotBlank(message = "Mô tả không được bỏ trống!")
 	private String description;
 	
-	@OneToMany(mappedBy="role", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy="role", fetch = FetchType.LAZY, cascade= CascadeType.ALL)
+	 
 	private List<User> users;
 
 	public Role() {
@@ -53,6 +55,7 @@ public class Role {
 	}
 
 	public void setName(String name) {
+	
 		this.name = name;
 	}
 
