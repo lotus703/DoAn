@@ -20,10 +20,16 @@
 * Nhắc nhở khi gần deadline
 * Tính lương của nhân viên
 
-## Ngôn ngữ lập trình và công nghệ
-* Ngôn ngữ: HTML, CSS, Javascript, Java
-* Framework: Springboot, bootstrap
-* Thư viện: Spring Security, Thymleaf,...
+## Ngôn ngữ lập trình
+* HTML
+* CSS
+* Javascript
+* Java
+## Famework và thư viện
+* [Spring Boot](https://github.com/spring-projects/spring-boot)
+* [Swagger](https://github.com/swagger-api/swagger-ui)
+* [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
+* [Spring Security](https://github.com/spring-projects/spring-security)
 
 ## Môi trường phát triển
 * [Eclips](https://www.eclipse.org/downloads/packages/)
