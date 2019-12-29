@@ -3,9 +3,8 @@
 * Xuất phát từ nhu cầu đó, nhóm em đã chọn đề tài [Quản Lý Nhân Sự](https://github.com/lotus703/DoAn) cho một công ty startup. 
 
 ## Demo giao diện
-
-## Các phân hệ chính
 ![home](https://github.com/lotus703/DoAn/blob/master/home.png)
+## Các phân hệ chính
 * Quản lý người dùng
 * Quản lý quyền
 * Quản lý nhóm việc
