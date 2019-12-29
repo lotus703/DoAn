@@ -1,8 +1,11 @@
 ## Giới thiệu
 * Có thể nói, yếu tố quan trọng nhất quyết định tới sự thành công hay thất bại của một công ty chính là yếu tố nguồn nhân lực. Chính tầm quan trọng này đã làm nảy sinh nhu cầu quản lý nhân sự trong một công ty một cách có hệ thống và toàn diện nhất. VIệc quản lý nhân sự có hiệu quả sẽ giúp các nhà quản lý có các chiến lực điều chỉnh cho phù hợp.
-* Xuất phát từ nhu cầu đó, nhóm em đã chọn đề tài “ Xây dựng Website quản lý nhân sự” cho một công ty startup. 
+* Xuất phát từ nhu cầu đó, nhóm em đã chọn đề tài [Quản Lý Nhân Sự](https://github.com/lotus703/DoAn) cho một công ty startup. 
+
+## Demo giao diện
 
 ## Các phân hệ chính
+![Atom](https://ibb.co/42M1WjQ)
 * Quản lý người dùng
 * Quản lý quyền
 * Quản lý nhóm việc
