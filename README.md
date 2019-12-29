@@ -44,3 +44,5 @@
 ## Đội ngũ phát triển
 * [Huỳnh Nguyễn Quang Tín](https://github.com/hnqtin) (16521242 - PMCL2016.3)
 * [Nguyễn Kha Tịnh](https://github.com/16521248) (16521248 - PMCL2016.3)
+## Giấy phép
+* [MIT](https://github.com/lotus703/DoAn/blob/master/LICENSE)
