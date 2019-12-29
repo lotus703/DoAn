@@ -1,5 +1,6 @@
 ## Web Quản Lý Nhân Sự
 :computer: Web quản lý nhân sự cho một công ty start up
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ## Giới thiệu
 * Có thể nói, yếu tố quan trọng nhất quyết định tới sự thành công hay thất bại của một công ty chính là yếu tố nguồn nhân lực. Chính tầm quan trọng này đã làm nảy sinh nhu cầu quản lý nhân sự trong một công ty một cách có hệ thống và toàn diện nhất. VIệc quản lý nhân sự có hiệu quả sẽ giúp các nhà quản lý có các chiến lực điều chỉnh cho phù hợp.
