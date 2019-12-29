@@ -5,7 +5,7 @@
 ## Demo giao diện
 
 ## Các phân hệ chính
-![Atom](https://ibb.co/42M1WjQ)
+![home](https://github.com/lotus703/DoAn/blob/master/home.png)
 * Quản lý người dùng
 * Quản lý quyền
 * Quản lý nhóm việc
