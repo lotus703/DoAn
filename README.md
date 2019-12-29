@@ -26,10 +26,10 @@
 * Javascript
 * Java
 ## Famework và thư viện
-* [Spring Boot](https://github.com/spring-projects/spring-boot)
-* [Swagger](https://github.com/swagger-api/swagger-ui)
-* [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
-* [Spring Security](https://github.com/spring-projects/spring-security)
+* [Spring Boot](https://github.com/spring-projects/spring-boot)  là một framework giúp chúng ta phát triển cũng như chạy ứng dụng một cách nhanh chóng.
+* [Swagger](https://github.com/swagger-api/swagger-ui) được sử dụng để phát triển, thiết kế, xây dựng và làm tài liệu cho các RESTful Web Service.
+* [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa) cung cấp một cách tiếp cận đúng đắn để truy cập dữ liệu từ cơ sở dữ liệu quan hệ, phi quan hệ, map-reduce và thậm chí còn hơn thế nữa.
+* [Spring Security](https://github.com/spring-projects/spring-security) cung cấp các cơ chế xác thực (authentication) và phân quyền (authorization) cho ứng dụng của bạn.
 
 ## Môi trường phát triển
 * [Eclips](https://www.eclipse.org/downloads/packages/)
