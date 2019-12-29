@@ -32,8 +32,8 @@
 * [Spring Security](https://github.com/spring-projects/spring-security) cung cấp các cơ chế xác thực (authentication) và phân quyền (authorization) cho ứng dụng của bạn.
 
 ## Môi trường phát triển
-* [Eclips](https://www.eclipse.org/downloads/packages/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Eclipse](https://www.eclipse.org/downloads/packages/) IDE dùng để phát triển phần backend của một ứng dụng web [Spring Boot](https://github.com/spring-projects/spring-boot)
+* [Visual Studio Code](https://code.visualstudio.com/) IDE dùng để phát triển phần front end (layout) của một ứng dụng web
 
 ## Cài đặt 
 * Tải và cài đặt [Eclips](https://www.eclipse.org/downloads/packages/)
