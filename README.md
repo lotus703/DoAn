@@ -38,7 +38,7 @@
 * [Visual Studio Code](https://code.visualstudio.com/) IDE dùng để phát triển phần front end (layout) của một ứng dụng web
 
 ## Cài đặt 
-* Tải và cài đặt [Eclips](https://www.eclipse.org/downloads/packages/)
+* Tải và cài đặt [Eclipse](https://www.eclipse.org/downloads/packages/)
 * Tải và cài đặt [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Đội ngũ phát triển
